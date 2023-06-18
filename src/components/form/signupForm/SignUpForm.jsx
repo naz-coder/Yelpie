@@ -1,7 +1,7 @@
 import React from "react";
-// import { FormStyle } from "./SignUpFormStyle";
 import "./SignUpFormStyle.scss";
-import useInputs from "../../customHooks/useInputs";
+import { Link } from "react-router-dom";
+import useInputs from "../../../customHooks/useInputs";
 
 const isNotEmpty = value => value.trim() !== "";
 const isEmail = value => value.includes('@');
@@ -130,6 +130,9 @@ const SignUpForm = () => {
         </div>
         <button disabled={!formIsValid} type="submit" className="submit-btn">Create Account</button>
       </form>
+      <div className="sign-in">
+        <p>Already registered? <Link to={"/login"} className="create-acct">Login</Link></p>
+      </div>
     </section>
   );
 };

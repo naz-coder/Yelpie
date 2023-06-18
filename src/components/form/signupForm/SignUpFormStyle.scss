@@ -110,6 +110,19 @@ p.error-msg{
     color: white;
   }
 
+    .sign-in{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        font-weight: 400;
+        margin-top: -0.5rem;
+
+        .create-acct{
+          color: $spColor;
+          text-decoration: underline;
+        }
+  }
+
 
 }
 

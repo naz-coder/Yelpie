@@ -1,10 +1,17 @@
 import './App.scss';
-import SignUpForm from "../src/components/form/SignUpForm";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignUpForm from './components/form/signupForm/SignUpForm';
+import LoginForm from './components/form/loginForm/LoginForm';
 
 function App() {
   return (
     <div className="App">
-      <SignUpForm/>
+      <Router>
+      <Routes>
+        <Route path="/" element={<SignUpForm/>}/>
+        <Route path="login" element={<LoginForm/>}/>
+      </Routes>
+      </Router>
     </div>
   );
 }
