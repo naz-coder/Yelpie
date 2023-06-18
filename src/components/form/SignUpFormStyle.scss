@@ -9,6 +9,9 @@ $errorMsg: #b12727;
 $submitBtn: #521d06;
 $lightBorder: #aeb1b3;
 $fontFamily: 'Signika Negative', sans-serif;
+$layout-breakpoint-medium: 1024px;
+$layout-breakpoint-small: 960px;
+
 
 section{
   background-color: $bgColor;
@@ -78,13 +81,14 @@ p.error-msg{
     transition: all 0.5s ease-in;
     padding: 1rem 2.5rem;
     margin-top: 0rem;
-    margin-right: 2rem;
+    // margin-right: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: $neutral;
     font-size: 1.2rem;
     font-weight: 900;
     font-family: $fontFamily;
+    width: 100%;
   }
 
   button.submit-btn:hover {
@@ -109,156 +113,24 @@ p.error-msg{
 
 }
 
- 
 
-  @media (max-width: 1024px) {
-  .section-title h3 {
-    font-size: 2rem;
-    margin-top: 0rem;
-    border-left: 3px solid #8b3611;
-    padding-left: 0.5rem;
-  }
-
-  .section-title p {
-    font-weight: 900;
-    font-size: 1.3rem;
-    color: #333333;
-    margin-top: -1rem;
-  }
-
-  .contact-outter {
-    grid-template-columns: 1fr;
-    grid-gap: 5%;
-  }
-
-  .contact-details h3 {
-    font-weight: 900;
-    font-size: 1.3rem;
-    color: #333333;
-  }
-
-  .contact-details p {
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #521d06;
-    margin-top: -1rem;
-  }
-
-  iframe{
-    width: 80vw;
-    height: 35vh;
-  }
-
-  .contact-form {
-    padding: 1.5rem 2.5rem;
-    height: 100%;
-  }
-
-  .client-contact-detail label,
-  .message-detail label {
-    margin-bottom: 0.3rem;
-  }
-
-  .client-contact-detail input {
-    margin-bottom: 1.5rem;
-  }
-
-  .message-detail textarea {
-    margin-bottom: 1.5rem;
-  }
-
-  button.submit-btn {
-    margin-top: 0rem;
-  }
-
-  }
-
-
-  @media (max-width: 768px) {
-
-.section-title h3 {
-  font-size: 2rem;
-  margin-top: 0rem;
-  border-left: 3px solid #8b3611;
-  padding-left: 0.5rem;
-}
-
-.section-title p {
-  font-weight: 900;
-  font-size: 1.3rem;
-  color: #333333;
-  margin-top: -1rem;
-}
-
-.contact-outter {
-  grid-template-columns: 1fr;
-  grid-gap: 5%;
-}
-
-.contact-details{
-    padding: 0.8rem 1.2rem;
-    font-size: 1.2rem;
-    height: 100%;
-
-  }
-
-
-.contact-details h3 {
-  font-weight: 900;
-  font-size: 1.3rem;
-  color: #333333;
-}
-
-.contact-details p {
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #521d06;
-  margin-top: -1rem;
-}
-
-.contact-form {
-  padding: 1.5rem 1.2rem;
-  height: 100%;
-}
-
-.client-contact-detail label,
-.message-detail label {
-  margin-bottom: 0.3rem;
-}
-
-.client-contact-detail input {
-    font-size: 1rem;
-    padding-left: 0.5rem;
-    height: 3rem;
-    width: 89%;
-  }
-
-  .message-detail textarea {
-    font-size: 1rem;
-    padding-left: 0.5rem;
-    height: 13rem;
-    margin-bottom: 1.5rem;
-    width: 89%;
-  }
-
-button.submit-btn {
-  margin-top: 0rem;
+@media (max-width: $layout-breakpoint-medium) {
+section{
+  margin: 10vh 15vw;
+  padding: 0.8rem 2.5rem 3rem 2.5rem;
 }
 }
 
-@media (max-width: 425px) {
-    .details{
-    flex-direction: column;
+@media (max-width: $layout-breakpoint-small) {
+  section{
+    margin: 10vh 5vw;
+    padding: 0.8rem 1.5rem 3rem 1.5rem;
+    label{
+        font-size: 1.15rem;
+    }
+    
+    input{
+      font-size: 1.15rem;
+    }
+    }
   }
-
-  li.location-icon, li.email-icon, li.phone-icon{
-    margin-bottom: -1rem;
-  }
-
-  .contact-details p {
-    margin-top: -1.2rem;
-    margin-bottom: 0.2rem;
-    font-size: 1.2rem;
-  }
-}
-;
