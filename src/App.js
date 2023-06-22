@@ -1,19 +1,24 @@
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SignUpForm from './components/form/signupForm/SignUpForm';
-import LoginForm from './components/form/loginForm/LoginForm';
+import Landing from './components/home/Landing';
+import { Amplify } from 'aws-amplify';
+import awsconfig from "./aws-exports";
+import {Authenticator, withAuthenticator} from "@aws-amplify/ui-react";
+import '@aws-amplify/ui-react/styles.css';
+Amplify.configure(awsconfig);
 
-function App() {
+function App({ signOut }) {
   return (
+    
     <div className="App">
       <Router>
+      <Landing signOut={signOut} />
       <Routes>
-        <Route path="/" element={<SignUpForm/>}/>
-        <Route path="login" element={<LoginForm/>}/>
+      <Route path="/" element={<Authenticator/>}/>
       </Routes>
       </Router>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);

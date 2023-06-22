@@ -7,9 +7,19 @@
   pointer-events: none;
 }
 
-body {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+$fontFamily: 'Signika Negative', sans-serif;
 
+body {
+  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+// background-color: antiquewhite;
+background-image: url("/assets/hotelHeroImg.jpg");
+// background: linear-gradient(rgba(255, 204, 153, 0.5)), url("/assets/hotelHeroImg.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+// @include background-image("/images/backgrounds/07.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
+font-family: $fontFamily;
 }
 
 @media (prefers-reduced-motion: no-preference) {

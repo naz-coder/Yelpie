@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
 $neutral: #ffffff;
 $bgColor: #e8e2f3;
-$spColor: #ad8026;
+$spColor: #8b3611;
 $titleColor: #372453;
 $textColor: #333333;
 $placeHolderColor: #c5c5c5;
 $errorMsg: #b12727;
-$submitBtn: #521d06;
+$submitBtn: #8b3611;
 $lightBorder: #aeb1b3;
-$fontFamily: 'Signika Negative', sans-serif;
 $layout-breakpoint-medium: 1024px;
 $layout-breakpoint-small: 960px;
 
-
-section{
+.signup-section{
   background-color: $bgColor;
   border: 1px solid $bgColor;
   background-position: right bottom;
   transition: all 0.5s ease-in-out;
-  padding: 0.8rem 2.5rem 3rem 2.5rem;
+  padding: 0.8rem 2.5rem 0rem 2.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   height: 100%;
   margin: 10vh 30vw;
   border-radius: 0.5rem;
-  font-family: $fontFamily;
 
+  a{
+    text-decoration: none;
+  }
 span{
   color: $spColor;
 }
@@ -44,7 +43,7 @@ label{
     font-size: 1.3rem;
     color: $textColor;
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0rem;
 }
 
 input{
@@ -74,6 +73,28 @@ p.error-msg{
     font-weight: 400;
   }
 
+textarea {
+    font-size: 1.2rem;
+    color: #000000;
+    padding-left: 0.7rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    width: 97.8%;
+    height: 10rem;
+    border: 1px solid #aeb1b3;
+    resize: none;
+    &::placeholder{
+      color: $placeHolderColor;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+
+textarea::-webkit-scrollbar{
+    display: none;
+  }
+  
   button.submit-btn {
     background-color: $submitBtn;
     border: 1px solid $submitBtn;
@@ -81,19 +102,17 @@ p.error-msg{
     transition: all 0.5s ease-in;
     padding: 1rem 2.5rem;
     margin-top: 0rem;
-    // margin-right: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: $neutral;
     font-size: 1.2rem;
     font-weight: 900;
-    font-family: $fontFamily;
     width: 100%;
   }
 
   button.submit-btn:hover {
-    background-color: #8b3611;
-    border: 1px solid #8b3611;
+    background-color: #572009;
+    border: 1px solid #572009;
     background-position: left bottom;
     transition: all 0.5s ease-in;
     color: $neutral;
@@ -122,20 +141,31 @@ p.error-msg{
           text-decoration: underline;
         }
   }
-
+.copy-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  .copy{
+    color: $spColor;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+  
 
 }
 
 
 @media (max-width: $layout-breakpoint-medium) {
-section{
+.signup-section{
   margin: 10vh 15vw;
   padding: 0.8rem 2.5rem 3rem 2.5rem;
 }
 }
 
 @media (max-width: $layout-breakpoint-small) {
-  section{
+  .signup-section{
     margin: 10vh 5vw;
     padding: 0.8rem 1.5rem 3rem 1.5rem;
     label{

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-yielpie-dev-150936-authRole",
+      "UnauthRoleArn": "arn:aws:iam::666840137414:role/amplify-yielpie-dev-150936-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::666840137414:role/amplify-yielpie-dev-150936-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-yielpie-dev-150936-deployment",
+      "UnauthRoleName": "amplify-yielpie-dev-150936-unauthRole",
+      "StackName": "amplify-yielpie-dev-150936",
+      "StackId": "arn:aws:cloudformation:eu-west-2:666840137414:stack/amplify-yielpie-dev-150936/439a28d0-103d-11ee-a39d-0a187f42beda",
+      "AmplifyAppId": "diubsnw98uo13"
+    },
+    "categories": {
+      "auth": {
+        "yielpie8ab445ca": {}
+      }
+    }
+  }
+}
