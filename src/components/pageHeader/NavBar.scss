@@ -2,7 +2,6 @@ $layout-breakpoint-small: 960px;
 $layout-breakpoint-extra-small: 425px;
 
 header{
-    // margin: 3rem 5rem;
   background:          #ffffff;
   background-position: right bottom;
   transition: all 0.5s ease-in-out;
@@ -18,12 +17,6 @@ header{
         flex-direction: row;
         justify-content: space-evenly;
        
-        // .home-menu-item{
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-            
-        // }
         .home-menu{
             color: #30A190;
             font-weight: 900;

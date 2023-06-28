@@ -2,18 +2,24 @@ $layout-breakpoint-medium: 1024px;
 $layout-breakpoint-small: 960px;
 $layout-breakpoint-extra-small: 425px;
 
-.landing{
+
+.landing{  
     .landing-content{
         color: aliceblue;
         padding: 0 3rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
         h1{
             font-size: 5rem;
             margin-top: 2rem;
+            text-align: center;
         }
         p{
             font-size: 3rem;
             margin-top: -5rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
         button.create-profile-btn {
             background-color: #8b3611;
@@ -27,7 +33,9 @@ $layout-breakpoint-extra-small: 425px;
             text-align: center;
             color: white;
             font-size: 1.2rem;
-            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
           }
         
           button.create-profile-btn:hover {
@@ -36,6 +44,7 @@ $layout-breakpoint-extra-small: 425px;
             background-position: left bottom;
             transition: all 0.5s ease-in;
             translate: 0.5s;
+            cursor: pointer;
           }
     }
 }

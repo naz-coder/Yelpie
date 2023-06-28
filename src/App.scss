@@ -1,46 +1,10 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
+.app-logo {
   height: 40vmin;
-  pointer-events: none;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
-$fontFamily: 'Signika Negative', sans-serif;
-
-body {
-  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-// background-color: antiquewhite;
-background-image: url("/assets/hotelHeroImg.jpg");
-// background: linear-gradient(rgba(255, 204, 153, 0.5)), url("/assets/hotelHeroImg.jpg");
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-// @include background-image("/images/backgrounds/07.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
-font-family: $fontFamily;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  margin-bottom: -5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  animation: App-logo-spin infinite 5s linear;
 }
 
 @keyframes App-logo-spin {
@@ -50,4 +14,15 @@ font-family: $fontFamily;
   to {
     transform: rotate(360deg);
   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+$fontFamily: 'Signika Negative', sans-serif;
+
+body {
+background-image: url("/assets/hotelHeroImg.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+font-family: $fontFamily;
 }

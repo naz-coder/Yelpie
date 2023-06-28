@@ -1,10 +1,9 @@
 import React from 'react'
 import "../pageHeader/NavBar.scss"
-import {Link, useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Logo from "../../assets/Logo.png"
 
 const NavBar = (signOut) => {
-    // const navigator = useNavigate();
     const signOutHandler = () => {
         signOut.signOut();
     };

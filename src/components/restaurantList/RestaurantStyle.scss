@@ -1,0 +1,72 @@
+.restaurant-list{
+    .account-link{
+        text-decoration: none;
+        button.create-account-btn {
+            background-color: #8b3611;
+            border: 1px solid #8b3611;
+            background-position: right bottom;
+            transition: all 0.5s ease-in;
+            padding: 0.35rem 1rem;
+            margin-top: 0rem;
+            margin-bottom: -1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        
+        button.create-account-btn:hover {
+          background-color: #30A190;
+          border: 1px solid #30A190;
+          background-position: left bottom;
+          transition: all 0.5s ease-in;
+          translate: 0.5s;
+          cursor: pointer;
+        }
+    }
+    
+    .restaurant-created{
+        margin: 0 2rem;
+        h3{
+            font-size: 2rem;
+            margin-bottom: -1.5rem;
+            color: #8b3611;
+        }
+        p{
+            font-size: 1.3rem;
+            margin-bottom: -1.7rem;
+            color: #ffffff;
+            .restaurant-span{
+                color: #4e1c06;
+                font-weight: 900;
+            }
+        }
+        
+            button.delete-btn {
+                background-color: #5c0b03;
+                border: 1px solid #5c0b03;
+                background-position: right bottom;
+                transition: all 0.5s ease-in;
+                padding: 0.35rem 1rem;
+                margin-top: 2rem;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;
+                color: white;
+                font-size: 1.2rem;
+              }
+            
+            button.delete-btn:hover {
+              background-color: #a0180b;
+              border: 1px solid #a0180b;
+              background-position: left bottom;
+              transition: all 0.5s ease-in;
+              translate: 0.5s;
+              cursor: pointer;
+            }
+        
+    }
+}
+

@@ -1,27 +1,38 @@
-import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Amplify } from "aws-amplify";
+import "./App.scss";
+import { Authenticator} from "@aws-amplify/ui-react";
 import Landing from './components/home/Landing';
-import { Amplify } from 'aws-amplify';
-import awsconfig from "./aws-exports";
+import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
-import {Authenticator, withAuthenticator} from "@aws-amplify/ui-react";
-import '@aws-amplify/ui-react/styles.css';
-Amplify.configure(awsconfig);
+import Logo from "../src/assets/Logo.png"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RestaurantList from "./components/restaurantList/RestaurantList";
+import CreateNewRestaurant from "./components/createNewRestaurant/CreateNewRestaurant";
 Amplify.configure(awsExports);
 
-
-function App({ signOut }) {
+function App() {
+  const components = {
+    Header() {
+      return (
+      <img alt="yelpie logo" src={Logo} className="app-logo"/>
+      );
+    }
+  }  
   return (
-    
-    <div className="App">
-      <Router>
-      <Landing signOut={signOut} />
-      <Routes>
-      <Route path="/" element={<Authenticator/>}/>
-      </Routes>
-      </Router>
-    </div>
+    <Authenticator components={components} >
+      {({ signOut }) => (
+          <div>
+            <BrowserRouter>
+            <Landing signOut={signOut} />
+              <Routes>
+                <Route exact path="/" element={<RestaurantList />} />
+                <Route path="/account" element={<CreateNewRestaurant/>} />
+              </Routes>
+            </BrowserRouter>
+
+          </div>
+      )}
+    </Authenticator>
   );
 }
-
-export default withAuthenticator(App);
+export default App;
